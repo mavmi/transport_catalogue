@@ -1,0 +1,23 @@
+syntax="proto3";
+
+package transport_proto;
+
+message Rgb {
+	uint32 red = 1;
+	uint32 green = 2;
+	uint32 blue = 3;
+}
+
+message Rgba {
+	uint32 red = 1;
+	uint32 green = 2;
+	uint32 blue = 3;
+	double opacity = 4;
+}
+
+message Color {
+	uint32 index = 1;
+	Rgb rgb = 2;
+	Rgba rgba = 3;
+	string text = 4;   
+}
